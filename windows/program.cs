@@ -7,12 +7,11 @@ using System.Text.RegularExpressions;
 using Microsoft.Win32;
 
 // ===== НАСТРОЙКИ ПРОЕКТА =====
-const string Title = "КРМП · Дальневосточный";
 const string Host = "31.77.232.41";
 const int Port = 3431;
-const string VkUrl = "https://vk.com/";          // ссылка на группу
-const string DiscordUrl = "https://discord.com/"; // ссылка на Discord
-const string GameExe = "samp.exe";               // исполняемый файл клиента в папке игры
+const string VkUrl = "https://vk.com/";
+const string DiscordUrl = "https://discord.com/";
+const string GameExe = "samp.exe";
 // =============================
 
 ApplicationConfiguration.Initialize();
@@ -22,6 +21,9 @@ class Cfg { public string Nick { get; set; } = ""; public string GamePath { get;
 
 class MainForm : Form
 {
+    const string Host = "31.77.232.41";
+    const int Port = 3431;
+    const string GameExe = "samp.exe";
     static readonly string CfgFile = Path.Combine(
         Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "DVLauncher", "config.json");
     Cfg cfg = new();
